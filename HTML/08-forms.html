@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form yapısı</title>
+</head>
+<body>
+
+    <h1>Form Yapısı</h1>
+
+
+    <form method="post" action="users/update">
+
+
+        <label for="name"> Lutfen adınızı giriniz : </label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <label for="surName"> Lutfen soyadınızı giriniz : </label>
+        <input type="text" id="surName" placeholder="Soyadinizi giriniz"> <!-- "placeholder" attribute'i default olarak textbox içine silik yazi-->
+        <br>
+        <br>
+        <label for="e-mail"> Lutfen e-posta adresinizi giriniz : </label>
+        <input type="email" id="e-mail">
+        <br>
+        <br>
+        <label for="password"> Lutfen sifrenizi giriniz : </label>
+        <input type="password" id="password">
+        <br>
+        <br>
+        <label for="birthDay"> Lutfen dogum tarihinizi seciniz : </label>
+        <input type="date" id="birthDay">
+        <br>
+        <br>
+        <label for="phoneNumber"> Lutfen telefon numaranızı giriniz : </label>
+        <input type="number" id="phoneNumber">
+        <br>
+        <br>
+
+        <label for="gender">Cinsiyetinizi seçiniz : </label>
+        <br>
+        <br>
+        <input type="radio" name="cinsiyet" id="erkek"> <!-- "label"daki for ile "input"taki id ==> label ile input'u birbirine bağlar-->
+        <label for="erkek">Erkek</label>
+        <input type="radio" name="cinsiyet" id="kadın">
+        <label for="kadın">Kadın</label>
+        <input type="radio" name="cinsiyet" id="diger">
+        <label for="diger">Belirtmek istemiyorum</label>
+        <br>
+        <br>
+        <!--radio button lar olusturulurken aynı seçme grubunda olduklarını göstermek için aynı name girilir-->
+
+        <label for="hobby">Hobilerinizi seciniz : </label>
+        <br>
+        <br>
+        <input type="checkbox" name="javadil" id="java">
+        <label for="java">Java</label>
+        <input type="checkbox" name="javascriptdil" id="script">
+        <label for="script">JavaScript</label>
+        <input type="checkbox" name="phytondil" id="phyton">
+        <label for="phyton">Phyton</label>
+
+        <br>
+        <br>
+        <label for="renk">Sevdiğiniz rengi seçiniz : &nbsp; </label>
+        <input type="color" id="renk">
+        <!-- boşluk bırakmak için text'in içerisine ihtiyaç kadar "&nbsp" kullanılır-->
+        <br>
+        <br>
+        <label for="aralik">Bir aralik seciniz</label>
+        <input type="range" step="10" id="aralik">
+        <br>
+        <br>
+        <label for="saat">Saat giriniz : &nbsp;</label>
+        <input type="time" id="saat">
+        <br>
+        <br>
+        <label for="dosya">Resumenizi yukleyiniz : &nbsp;</label>
+        <input type="file" id="dosya">
+        <br>
+        <br>
+        <select name="Dropdown menu sehir" id="BornPlace">
+
+            <option disabled selected >Dogum yeriniz </option> <!-- "disabled selected"==> seçilemeyen default selected yaptık-->
+            <option value="01">Ankara</option>
+            <option value="02">İstanbul</option>
+            <option value="03">İzmir</option>
+
+        </select>
+
+        <br>
+        <br>
+        <label for="">Sirketimizden beklentileriniz nelerdir?</label>
+        <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>  <!-- raws attribute'i ile aynı anda görünebilecek satır sayısı belirlenir-->
+        <br>
+        <br>
+        <input type="button" value="Buton">  <!--  butona istediğimiz görevi atayabiliriz. -->
+        <input type="submit" value="Gonder">
+        <input type="reset" value="Temizle">
+
+    </form>
+    
+
+</body>
+</html>
